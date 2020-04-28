@@ -10,6 +10,10 @@ namespace AnnoMath.Vectors
     /// </summary>
     public partial class Vector2
     {
+        /// <summary>
+        /// Create normalized Vector2
+        /// </summary>
+        /// <returns>Normalized Vector2</returns>
         public Vector2 Normal()
         {
             float magnitude = this.Magnitude();
@@ -33,6 +37,26 @@ namespace AnnoMath.Vectors
         public float Dot(Vector2 vec)
         {
             return this.x * vec.x + this.y * vec.y;
+        }
+
+        /// <summary>
+        /// Calculate angle between two vectors
+        /// </summary>
+        /// <param name="vec">Second Vector2</param>
+        /// <returns>Angle between two vectors in radian</returns>
+        public float Angle(Vector2 vec)
+        {
+            float thisMagnitude = this.Magnitude();
+            float vecMagnitude = vec.Magnitude();
+
+            if (thisMagnitude == 0 && vecMagnitude == 0)
+            {
+                throw new DivideByZeroException("Vector2 - one of vectors have magnitude equal zero.");
+            }
+
+            float dotProduct = this.Dot(vec);
+
+            return (float)Math.Acos(dotProduct / (thisMagnitude * vecMagnitude));
         }
 
         /// <summary>
