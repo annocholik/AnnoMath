@@ -16,7 +16,7 @@ namespace AnnoMath.Figures2D
         /// <returns>Circle field</returns>
         public float Field()
         {
-            return (float)Math.PI * this.radius * this.radius;
+            return (float)Math.PI * this._radius * this._radius;
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace AnnoMath.Figures2D
         /// <returns>Circle circumference</returns>
         public float Circumference()
         {
-            return 2f * (float)Math.PI * this.radius;
+            return 2f * (float)Math.PI * this._radius;
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace AnnoMath.Figures2D
         /// <returns>Circle diameter</returns>
         public float Diameter()
         {
-            return 2f * this.radius;
+            return 2f * this._radius;
         }
     }
 }
