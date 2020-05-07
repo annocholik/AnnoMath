@@ -12,11 +12,11 @@ namespace AnnoMath.Figures2D
     public partial class Squere
     {
         /// <summary>
-        /// Squere radius
+        /// Squere edge
         /// </summary>
         private float _edge;
         /// <summary>
-        /// Squere radius
+        /// Squere edge
         /// </summary>
         public float edge
         {
@@ -26,9 +26,9 @@ namespace AnnoMath.Figures2D
             }
             set
             {
-                if(value < 0)
+                if(value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("Squere - edge must be greater or equal zero");
+                    throw new ArgumentOutOfRangeException("Squere - edge must be greater than zero");
                 }
                 this._edge = value;
             }

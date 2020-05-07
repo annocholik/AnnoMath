@@ -11,11 +11,11 @@ namespace AnnoMath.Figures2D
     public partial class Circle
     {
         /// <summary>
-        /// Default constructor, where radius is set zero and position is set as default Vector2.
+        /// Default constructor, where radius is set one and position is set as default Vector2.
         /// </summary>
         public Circle()
         {
-            this.radius = 0;
+            this.radius = 1f;
             this.position = new Vector2();
         }
 
