@@ -26,9 +26,9 @@ namespace AnnoMath.Figures2D
             }
             set
             {
-                if(value < 0)
+                if(value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("Circle - radius must be greater or equal zero");
+                    throw new ArgumentOutOfRangeException("Circle - radius must be greater than zero");
                 }
                 this._radius = value;
             }

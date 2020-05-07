@@ -11,11 +11,11 @@ namespace AnnoMath.Figures2D
     public partial class Squere
     {
         /// <summary>
-        /// Default constructor, where edge is set zero and position is set as default Vector2.
+        /// Default constructor, where edge is set one and position is set as default Vector2.
         /// </summary>
         public Squere()
         {
-            this.edge = 0;
+            this.edge = 1f;
             this.position = new Vector2();
         }
 
